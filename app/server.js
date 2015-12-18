@@ -1,8 +1,7 @@
-var http = require('http');
+var express = require('express');
+var app = express();
 
-var server = http.createServer(function (req, res) {
-  res.writeHead(200);
-  res.end('Hey peoople!!!');
-});
+app.use('/', express.static('app'));
+app.use('/node_modules', express.static('node_modules'));
 
-server.listen(8000);
+app.listen(8000);
