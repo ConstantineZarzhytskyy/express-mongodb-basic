@@ -5,6 +5,13 @@ var user = config.user;
 
 config.connectToDataBase();
 
-/*API HERE*/
+router.route('/users')
+    .get(function (req, res) {
+      user.find(function (err, users) {
+        if (err) { res.send(err); }
+
+        res.json(users);
+      });
+    });
 
 module.exports = router;
