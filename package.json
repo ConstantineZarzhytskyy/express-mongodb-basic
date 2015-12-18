@@ -1,0 +1,21 @@
+{
+  "name": "express-mongodb-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConstantineZarzhytskyy/express-mongodb-basic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ConstantineZarzhytskyy/express-mongodb-basic/issues"
+  },
+  "homepage": "https://github.com/ConstantineZarzhytskyy/express-mongodb-basic#readme"
+}
