@@ -36,6 +36,15 @@ router.route('/users:userId')
 
         res.json(user);
       });
+    })
+    .delete(function (req, res) {
+      var userId = req.params.userId;
+
+      user.remove({ _id: userId }, function (err) {
+        if (err) { res.send(err); }
+
+        res.end();
+      });
     });
 
 module.exports = router;
