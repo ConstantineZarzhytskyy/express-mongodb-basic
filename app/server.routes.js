@@ -37,6 +37,24 @@ router.route('/users:userId')
         res.json(user);
       });
     })
+    .put(function (req, res) {
+      var userId = req.params.userId;
+      var value = req.body.value;
+
+      user.update({ _id: userId },
+          {
+            $set: {
+              name: value.name,
+              surname: value.surname,
+              phone: value.phone,
+              dob: value.dob
+            }
+          }, function (err) {
+            if (err) { res.send(err); }
+
+            res.end();
+          });
+    })
     .delete(function (req, res) {
       var userId = req.params.userId;
 
