@@ -12,6 +12,19 @@ router.route('/users')
 
         res.json(users);
       });
+    })
+    .post(function (req, res) {
+      var value = req.body.user;
+      var collection = new user();
+
+      collection.name = value.name;
+      collection.surname = value.surname;
+
+      collection.save(function(err, user) {
+        if (err) { res.send(err); }
+
+        res.json(user);
+      });
     });
 
 module.exports = router;
