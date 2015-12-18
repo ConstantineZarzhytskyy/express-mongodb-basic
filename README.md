@@ -21,5 +21,5 @@ Deploy project on heroku
 <li>git push heroku master</li>
 
 <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction">
-More info about deploy on heoku for Node.js
+More info about deploy on heroku for Node.js
 </a>
