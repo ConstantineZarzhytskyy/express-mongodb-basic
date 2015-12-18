@@ -27,4 +27,15 @@ router.route('/users')
       });
     });
 
+router.route('/users:userId')
+    .get(function (req, res) {
+      var id = req.params.userId;
+
+      user.find({ _id: id }, function (err, user) {
+        if (err) { res.send(err); }
+
+        res.json(user);
+      });
+    });
+
 module.exports = router;
